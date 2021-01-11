@@ -19,7 +19,7 @@ def get_columns():
 
     from .models import DailyMailColumn#i tried to import it at the beginning of the file but kept getting an error
     for new_link, title, columnist in zip(links, titles, columnists):
-        print(title)
+        # print(title)
         column = DailyMailColumn(link=new_link, title=title, columnist=columnist)
         try:
             column.save()

@@ -7,6 +7,6 @@ class ContentConfig(AppConfig):
     def ready(self):
         scheduler = BackgroundScheduler()
         # Create a schedule to run the get_dailymail_columns function in the background
-        scheduler.add_job(func=get_columns, trigger="interval", seconds=15)
+        scheduler.add_job(func=get_columns, trigger="interval", seconds=300)
         # Starts the schedule
         scheduler.start()
