@@ -10,4 +10,3 @@ class ContentConfig(AppConfig):
         scheduler.add_job(func=get_columns, trigger="interval", seconds=15)
         # Starts the schedule
         scheduler.start()
-        # get_columns()

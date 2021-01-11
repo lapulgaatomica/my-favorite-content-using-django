@@ -1,0 +1,65 @@
+body {
+	background-color: white;
+	color: #6aa;
+	margin: 0;
+	font: 0.8em / 1.2 Arial, Helvetica, sans-serif;
+}
+header h1{
+	text-align: center;
+	border: 5px solid #6aa;
+	border-radius: 10px;
+	padding: 1.2em;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+ul {
+	list-style-type: none;
+	padding: 0em;
+}
+ul li{
+	margin: 10px;
+	border: 4px solid #6aa;
+	border-radius: 10px;
+	text-align: center;
+	padding: 1.2em;
+}
+ul li a {
+	text-decoration: none;
+	color: #a66;
+}
+.author{
+	color: #6aa;
+}
+.pages ul{
+	display: flex;
+	justify-content: center;
+}
+.pages ul li{
+	font-weight: bold;
+}
+.currentpage{
+	background-color: #6aa;
+	pointer-events:none;
+	opacity:0.8;
+}
+@media screen and (min-width: 768px) {
+	main ul{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1.1em;
+	}
+	.columns{
+		height: auto;
+		font-size: 2em;
+	}
+	header h1{
+		font-size: 5em;
+		padding: 0.3em;
+		margin: 0;
+	}
+	ul li {
+		margin: 0;
+	}
+}

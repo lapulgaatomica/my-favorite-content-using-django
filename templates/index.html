@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Content</title>
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">My Favorite Web Content</h1>
+    </header>
+    <main>
+      <ul>
+        {% for column in columns %}
+          <li class="columns">
+            <a href="{{ column.link }}">{{ column.title }}</a>
+            <div class="author"><em> by {{ column.columnist }}</em></div>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="pages">
+        <ul>
+          {% if page_obj.has_previous %}
+          <li>
+            <a href="?page={{page_obj.previous_page_number}}">{{page_obj.previous_page_number}}</a>
+          </li>
+          {% endif %}
+          <li class="currentpage">
+            <a href="#">{{page_obj.number}}</a>
+          </li>
+          {% if page_obj.has_next %}
+          <li>
+            <a href="?page={{page_obj.next_page_number}}">{{page_obj.next_page_number}}</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>
