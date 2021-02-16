@@ -13,6 +13,7 @@ lxml = "*"
 django = "*"
 gunicorn = "==19.9.0"
 whitenoise = "==4.1.4"
+python-decouple = "==3.4"
 
 [requires]
 python_version = "3.8"
